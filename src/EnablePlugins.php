@@ -5,14 +5,15 @@ namespace Androlax2\WordPress\PluginControl;
 class EnablePlugins extends TogglePlugins
 {
 
-	protected $message = 'Force-enabled';
+	protected $message = 'Enabled in this environment.';
 
 	public function change_action_links($actions)
 	{
 		unset($actions['deactivate']);
 		unset($actions['delete']);
 		unset($actions['disabled']);
-		$actions['enabled'] = '<i>' . esc_html($this->message) . '</i>';
+		$message = esc_html($this->message);
+		$actions['enabled'] = "<i><span style='color: #43a047;'>$message</span></i>";
 
 		return $actions;
 	}

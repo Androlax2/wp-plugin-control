@@ -1,0 +1,21 @@
+{
+  "name": "androlax2/wp-plugin-control",
+  "description": "Library for WordPress plugin control.",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Théo Benoit",
+      "email": "theo.benoit16@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Androlax2\\WordPress\\PluginControl\\": [
+        "src/"
+      ]
+    }
+  }
+}
